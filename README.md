@@ -1,5 +1,36 @@
 **Status:** Archive (code is provided as-is, no updates expected)
 
+# Setup
+
+
+1. try running ```pip install -r requirements.txt``` to download all dependencies
+
+2. download a model using ```python dowmload_model.py [MODEL]``` where model = 124M,355M,774M or 1.5B
+
+3. update interactive_conditional_samples.py to match downloaded model 
+```
+def interact_model(
+    model_name='774M',
+    seed=None,
+    nsamples=1,
+    batch_size=1,
+    length=None,
+    temperature=1,
+    top_k=0,
+    top_p=1,
+    models_dir='models',
+):
+```
+
+4. run ```python src/interactive_conditional_samples.py```
+
+
+
+
+
+
+
+
 # gpt-2
 
 Code and models from the paper ["Language Models are Unsupervised Multitask Learners"](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf).
