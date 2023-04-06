@@ -1,9 +1,11 @@
 import numpy as np
-import tensorflow as tf
-from tensorflow.contrib.training import HParams
+import tensorflow.compat.v1 as tf
+import tensor2tensor.utils.hparam as hp
+
+tf.disable_v2_behavior()
 
 def default_hparams():
-    return HParams(
+    return hp.HParams(
         n_vocab=0,
         n_ctx=1024,
         n_embd=768,

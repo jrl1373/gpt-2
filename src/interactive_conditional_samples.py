@@ -4,12 +4,13 @@ import fire
 import json
 import os
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 import model, sample, encoder
 
+tf.disable_v2_behavior()
 def interact_model(
-    model_name='124M',
+    model_name='774M',
     seed=None,
     nsamples=1,
     batch_size=1,
